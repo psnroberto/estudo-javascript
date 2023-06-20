@@ -15,8 +15,6 @@ function Pessoa(nome, sobrenome, idade) { // Criamos uma Constructor Function "P
 
     // Criaremos agora três propriedade dentro do objeto ("this"), e definiremos os métodos "get" e o "set" de cada propriedade;
 
-
-
     Object.defineProperty(this, 'nome', {
 
         // Ao utilizar o método "get", a função definida passará a ter um comportamento semelhante a de uma propriedade do objeto, e não mais de um método. O "get" tem como função apenas buscar e retornar o valor  das propriedades do objeto;
