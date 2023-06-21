@@ -15,11 +15,11 @@ class Produto {
         this.preco = preco
     }
 
-    aumento(percentual){
+    aumento(percentual) {
         this.preco = this.preco + (this.preco * percentual / 100)
     }
 
-    desconto(percentual){
+    desconto(percentual) {
         this.preco = this.preco - (this.preco * percentual / 100)
     }
 }
@@ -40,7 +40,7 @@ console.log(produto.preco)
 // Agora vamos criar uma outra class, a partir da class "Produto", através do "extends":
 
 class Camiseta extends Produto {
-    constructor(nome, preco, cor, tamanho){
+    constructor(nome, preco, cor, tamanho) {
         super(nome, preco)
         this.cor = cor
         this.tamanho = tamanho
@@ -64,8 +64,8 @@ console.log(camiseta.preco)
 
 // Vamos agora criar uma nova class, "CamisetaEspecial", que terá como Super Class "Camiseta", e vamos verificar o seu comportamento:
 
-class CamisetaEspecial extends Camiseta{
-    constructor(nome, preco, tamanho, cor, edicao){
+class CamisetaEspecial extends Camiseta {
+    constructor(nome, preco, tamanho, cor, edicao) {
         super(nome, preco, cor, tamanho)
         this.edicao = edicao
     }
@@ -89,7 +89,7 @@ console.log(camisetaEspecial.preco)
 // Por último, vamos agora criar uma outra class, também a a partir de class "Produto", e em seguida um novo objeto, "caneca":
 
 class Caneca extends Produto {
-    constructor(nome, preco, tamanho, material){
+    constructor(nome, preco, tamanho, material) {
         super(nome, preco)
         this.tamanho = tamanho
         this.material = material
