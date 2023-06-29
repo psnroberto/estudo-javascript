@@ -42,7 +42,14 @@ async function executaFuncoes2() {
         console.log(retornoReject)
     }
 
+    // O bloco "try", como o próprio nome diz, tentará executar as linhas de código, e, caso se depare com algum erro, o bloco "catch" será executado;
+
+    // O bloco "catch" pegará o erro e tentará tratá-lo. Ele pode receber como argumento o retorno do "reject" definido em nossa função criadora das promises;
+
+    // Após o acionamento do bloco "catch", a execução da função é interrompida, a não ser que criemos um bloco "finally" em seguida;
 }
+
+    // Podemos, através de um bloco "finally" definir algo que a nossa função executará após algum erro ser tratado no bloco "catch" e antes de ser finalizada;
 
 async function executaFuncoes3() {
     try {
@@ -52,10 +59,23 @@ async function executaFuncoes3() {
         await CriaPromise(18, 18, 1000)
     } catch (retornoReject) {
         console.log(retornoReject)
+    } finally {
+        console.log('A execução deste exemplo chegou ao fim!')
     }
 }
+
+// Por fim, chamamos a função "executaFuncoes3()" e printamos uma mensagem no log, para verificar que esta mensagem será exibida antes de qualquer outra, pois o JavaScript entende que a execução do restante do código não pode ser interrompida para a execução de funções assíncronas.
 
 executaFuncoes3()
 
 console.log('Este mensagem será exibida antes de qualquer outra!')
+
+// CONCLUSÃO E RESUMO
+
+// Ao utilizarmos "async" e "await", conseguimos fazer com que nossas funções assíncronas em relação ao código como um todo tenham um comportamento síncrono dentro de si, de forma mais limpa e clara;
+
+// Podemos receber a tratar erros através dos blocos "try and catch". O parâmetro utilizado no bloco "catch" poderá ser o retorno definido no "reject" da nossa Função Construtora de Promises;
+
+// Podemos fazer o encadeamento de funções, como no exemplo acima, onde dentro de "executaFuncoes3()" chamamos "executaFuncoes2()", e dentro desta última, "executaFuncoes()".
+
 
